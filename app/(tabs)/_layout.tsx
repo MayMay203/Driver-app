@@ -14,30 +14,62 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
+            position: "absolute",
           },
           default: {},
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Nhận đơn",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="bill.fill" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="history"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Lịch sử",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="history.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="income"
+        options={{
+          title: "Thu nhập",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="income.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="evaluate"
+        options={{
+          title: "Đánh giá",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="star.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Cá nhân",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="account.fill" color={color} />
+          ),
         }}
       />
     </Tabs>
