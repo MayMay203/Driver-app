@@ -26,21 +26,21 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
     <View className="flex-col gap-y-1">
           <View className="flex-row gap-x-2">
             <MaterialIcons name="adjust" color="#FF7F50" size={14} />
-            <Text className="leading-[1.2]">
+            <Text className="leading-[1.2] max-w-[172px]">
               {data.startingLocation}
             </Text>
           </View>
           <MaterialIcons name="south" color="#D9D9D9" size={14} />
           <View className="flex-row gap-x-2">
             <MaterialIcons name="location-pin" color="#27AE60" size={16} />
-            <Text className="leading-[1.2]">
+            <Text className="leading-[1.3] max-w-[172px]">
               {data.destination}
             </Text>
           </View>
         </View>
       </View>
-      <View className="flex-col justify-between mt-4">
-        <View className="flex-row gap-x-1 items-center mb-3 justify-center">
+      <View className="flex-col justify-between items-center mt-4">
+        <View className="flex-row gap-x-1 items-center mb-6 justify-center">
           {/* <MaterialIcons name="money" color="#FFC700" size={16} /> */}
           <Text>Tổng tiền: </Text>
           <Text className="text-[#27AE60] font-semibold italic">{data.total} VNĐ</Text>

@@ -6,6 +6,7 @@ const images = {
   distance: require("./distance.png"),
   departIcon: require("./departmentIcon.svg"),
   destinationIcon: require("./destinationIcon.svg"),
+  decorate: require("./decorate.png"),
 };
 
 export default images;
