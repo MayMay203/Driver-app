@@ -1,24 +1,12 @@
-import { StyleSheet, Text, View } from "react-native"
+import Header from "@/components/ui/Header";
+import { Text, View } from "react-native";
 
 const Orders = () => {
-  return (<View style={styles.container}>
-    <Text style={styles.text}>
-      Orders Screen
-    </Text>
-  </View>)
-}
+  return (
+    <View>
+      <Header/>
 
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  }
-})
+    </View>
+  );
+};
 export default Orders;
