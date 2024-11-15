@@ -1,10 +1,14 @@
-import { Button, Image, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import images from "../../assets/images";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Button from "./Button";
 
 const Header = () => {
+  const handleLogin = () => {};
+
   return (
-    <View className="flex-row p-3 justify-between items-center">
+    <View className="flex-row p-3 py-4 justify-between items-center bg-[#fff]"
+    >
       <View>
         <Image
           source={images.logo}
@@ -15,13 +19,14 @@ const Header = () => {
           Mỗi chuyến xe là mỗi...
         </Text>
       </View>
-      <View className="flex-row gap-x-2">
-        <TouchableOpacity>
-          <MaterialIcons name="message" size={24} color="#A33A3A" />
-        </TouchableOpacity>
+      <View className="flex-row gap-x-3 items-center">
         <TouchableOpacity>
           <MaterialIcons name="notifications" size={24} color="#A33A3A" />
         </TouchableOpacity>
+        <TouchableOpacity>
+          <MaterialIcons name="message" size={24} color="#A33A3A" />
+        </TouchableOpacity>
+        {/* <Button title="Đăng nhập" onPress={handleLogin} type="outline"></Button> */}
       </View>
     </View>
   );

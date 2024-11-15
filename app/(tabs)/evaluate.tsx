@@ -1,3 +1,4 @@
+import Header from "@/components/ui/Header";
 import { StyleSheet, Text, View } from "react-native";
 
 const Evaluate = () => {
