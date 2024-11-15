@@ -3,7 +3,6 @@ import { SymbolWeight } from "expo-symbols";
 import React from "react";
 import { OpaqueColorValue, StyleProp, ViewStyle } from "react-native";
 
-// Định nghĩa các tên icon trong một kiểu cụ thể hơn.
 const MAPPING = {
   "house.fill": "home",
   "star.fill": "star",
