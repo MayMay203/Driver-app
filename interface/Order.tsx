@@ -6,4 +6,6 @@ export default interface Order {
   startingLocation: string;
   destination: string;
   total: number;
+  createAt?: string
+  paidAt?: string
 }
