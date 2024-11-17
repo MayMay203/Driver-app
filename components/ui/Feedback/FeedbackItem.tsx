@@ -6,8 +6,8 @@ import { Image, Text, View } from "react-native";
 
 const FeedbackItem: React.FC<{ data: Feedback }> = ({ data }) => {
   return (
-    <Link href="/detailOrder">
-      <View className="p-2 bg-[white] border-[1px] border-[#FFEBE4] mt-2">
+    <Link href="/detailOrder" className="mt-2">
+      <View className="p-2 bg-[white] border-[1px] border-[#FFEBE4]">
         <View className="flex-row gap-x-2">
           <View className="flex-row gap-x-3 flex-1">
             <Image
@@ -31,7 +31,7 @@ const FeedbackItem: React.FC<{ data: Feedback }> = ({ data }) => {
         </View>
         <Text className="mt-3 leading-[1.3]">{data.content}</Text>
       </View>
-    </Link>
+   </Link>
   );
 };
 export default FeedbackItem;
