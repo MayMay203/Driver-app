@@ -1,13 +1,13 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import images from "../../assets/images";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Link } from "expo-router";
 
 const Header = () => {
   const handleLogin = () => {};
 
   return (
-    <View className="flex-row p-3 py-4 justify-between items-center bg-[#fff]"
-    >
+    <View className="flex-row p-3 py-4 justify-between items-center bg-[#fff]">
       <View>
         <Image
           source={images.logo}

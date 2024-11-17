@@ -1,13 +1,13 @@
 import images from "@/assets/images";
 import Feedback from "@/interface/Feedback";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { Link } from "expo-router";
+// import { Link } from "expo-router";
 import { Image, Text, View } from "react-native";
 
 const FeedbackItem: React.FC<{ data: Feedback }> = ({ data }) => {
   return (
-    <Link href="/detailOrder" className="mt-2">
-      <View className="p-2 bg-[white] border-[1px] border-[#FFEBE4]">
+    // <Link href="/detailOrder" className="mt-2">
+      <View className="p-2 bg-[white] border-[1px] border-[#FFEBE4] mt-2">
         <View className="flex-row gap-x-2">
           <View className="flex-row gap-x-3 flex-1">
             <Image
@@ -31,7 +31,7 @@ const FeedbackItem: React.FC<{ data: Feedback }> = ({ data }) => {
         </View>
         <Text className="mt-3 leading-[1.3]">{data.content}</Text>
       </View>
-   </Link>
+  //  </Link>
   );
 };
 export default FeedbackItem;
