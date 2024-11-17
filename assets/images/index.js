@@ -7,6 +7,8 @@ const images = {
   departIcon: require("./departmentIcon.svg"),
   destinationIcon: require("./destinationIcon.svg"),
   decorate: require("./decorate.png"),
+  login: require("./login.png"),
+  google: require("./google.png"),
 };
 
 export default images;
