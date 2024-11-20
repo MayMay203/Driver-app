@@ -1,9 +1,10 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import images from "../../assets/images";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 
 const Header = () => {
+  const router = useRouter()
   const handleLogin = () => {};
 
   return (
@@ -19,7 +20,7 @@ const Header = () => {
         </Text>
       </View>
       <View className="flex-row gap-x-3 items-center">
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/notification")}>
           <MaterialIcons name="notifications" size={24} color="#A33A3A" />
         </TouchableOpacity>
         <TouchableOpacity>
