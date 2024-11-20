@@ -5,7 +5,6 @@ import { useRouter } from "expo-router";
 
 const Header = () => {
   const router = useRouter()
-  const handleLogin = () => {};
 
   return (
     <View className="flex-row p-3 py-4 justify-between items-center bg-[#fff]">
@@ -23,7 +22,7 @@ const Header = () => {
         <TouchableOpacity onPress={() => router.push("/notification")}>
           <MaterialIcons name="notifications" size={24} color="#A33A3A" />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/message")}>
           <MaterialIcons name="message" size={24} color="#A33A3A" />
         </TouchableOpacity>
       </View>

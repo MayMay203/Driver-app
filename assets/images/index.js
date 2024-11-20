@@ -9,6 +9,7 @@ const images = {
   decorate: require("./decorate.png"),
   login: require("./login.png"),
   google: require("./google.png"),
+  send: require('./send.png'),
 };
 
 export default images;

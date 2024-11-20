@@ -57,60 +57,67 @@ const Notification = () => {
   const [type, setType] = useState<string>("all");
 
   return (
-      <View className="h-full bg-white p-[4px]">
-        <Text className="font-bold text-[#000] text-[20px]">Thông báo</Text>
-        <View className="flex-row gap-x-3 justify-start mt-3 mb-3">
-          <TouchableOpacity
-            className="rounded-full px-4 py-1"
+    <View className="h-full bg-white p-[4px]">
+      <Text className="font-bold text-[#000] text-[20px]">Thông báo</Text>
+      <View className="flex-row gap-x-3 justify-start mt-3 mb-3">
+        <TouchableOpacity
+          className="rounded-full px-4 py-1"
+          style={
+            type === "all"
+              ? { backgroundColor: "#FF7F50", borderColor: "#FF7F50" }
+              : {
+                  backgroundColor: "white",
+                  borderColor: "#D9D9D9",
+                }
+          }
+          onPress={() => setType("all")}
+        >
+          <Text
             style={
               type === "all"
-                ? { backgroundColor: "#FF7F50", borderColor: "#FF7F50" }
+                ? { color: "#fff" }
                 : {
-                    backgroundColor: "white",
-                    borderColor: "#D9D9D9",
+                    color: "#000",
                   }
             }
-            onPress={() => setType("all")}
           >
-            <Text
-              style={
-                type === "all"
-                  ? { color: "#fff" }
-                  : {
-                      color: "#000",
-                    }
-              }
-            >
-              Tất cả
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            className="rounded-full px-4 py-1"
+            Tất cả
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded-full px-4 py-1"
+          style={
+            type === "notRead"
+              ? {
+                  backgroundColor: "#FF7F50",
+                  borderColor: "#FF7F50",
+                  borderWidth: 1,
+                }
+              : {
+                  backgroundColor: "white",
+                  borderColor: "#D9D9D9",
+                  borderWidth: 1,
+                }
+          }
+          onPress={() => setType("notRead")}
+        >
+          <Text
             style={
               type === "notRead"
-                ? { backgroundColor: "#FF7F50", borderColor: "#FF7F50" }
+                ? { color: "#fff" }
                 : {
-                    backgroundColor: "white",
-                    borderColor: "#D9D9D9",
+                    color: "#000",
                   }
             }
-            onPress={() => setType("notRead")}
           >
-            <Text
-              style={
-                type === "notRead"
-                  ? { color: "#fff" }
-                  : {
-                      color: "#000",
-                    }
-              }
-            >
-              Đã đọc
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <ScrollView><NotificationList dataList={dataList} /></ScrollView>
+            Đã đọc
+          </Text>
+        </TouchableOpacity>
       </View>
+      <ScrollView>
+        <NotificationList dataList={dataList} />
+      </ScrollView>
+    </View>
   );
 };
 
