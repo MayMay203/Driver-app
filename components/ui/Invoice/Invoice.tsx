@@ -6,51 +6,52 @@ import { Image, Text, View } from "react-native";
 
 const HistoryItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
   return (
-        <Link href='/detailOrder' className="px-3 py-5 bg-[#fff] mt-4 border-[1px] border-[#FFEBE4]">
-          <View className="flex-row gap-x-5">
-            <View className="flex-row gap-x-3">
-              <Image
-                source={images.avatar}
-                className="object-cover mt-1 w-[40px] h-[40px] rounded-full border-[#D34714] border-[1px]"
-              ></Image>
-              <View>
-                <Text className="text-[#D34714] font-semibold mb-1 max-w-[100px] leading-[1.4]">
-                  {data.name}
-                </Text>
-                <View className="flex-row">
-                  <Text>{data.gender}</Text>
-                </View>
-              </View>
-            </View>
-            <View className="flex-col gap-y-1">
-              <View className="flex-row gap-x-2">
-                <MaterialIcons name="adjust" color="#FF7F50" size={14} />
-                <Text className="leading-[1.2] max-w-[172px]">
-                  {data.startingLocation}
-                </Text>
-              </View>
-              <MaterialIcons name="south" color="#D9D9D9" size={14} />
-              <View className="flex-row gap-x-2">
-                <MaterialIcons name="location-pin" color="#27AE60" size={16} />
-                <Text className="leading-[1.3] max-w-[172px]">
-                  {data.destination}
-                </Text>
-              </View>
+    <Link
+      href="/detailOrder"
+      className="px-3 py-5 bg-[#fff] mt-4 border-[1px] border-[#FFEBE4]"
+    >
+      <View>
+        <View className="flex-row gap-x-3 mb-4">
+          <Image
+            source={images.avatar}
+            className="object-cover mt-1 w-[40px] h-[40px] rounded-full border-[#D34714] border-[1px]"
+          ></Image>
+          <View>
+            <Text className="text-[#D34714] font-semibold mb-1 max-w-[100%] leading-[1.4]">
+              {data.name}
+            </Text>
+            <View className="flex-row">
+              <Text>{data.gender}</Text>
             </View>
           </View>
-          <View className="flex-row gap-x-1 items-center mb-2 mt-4">
-            <Text>Tổng tiền: </Text>
-            <Text className="text-[#27AE60] font-semibold italic">
-              {data.total} VNĐ
+        </View>
+        <View className="flex-col gap-y-1">
+          <View className="flex-row gap-x-2">
+            <MaterialIcons name="adjust" color="#FF7F50" size={14} />
+            <Text className="leading-[1.2] w-[100%]">
+              {data.startingLocation}
             </Text>
           </View>
-          <View className="flex-row gap-x-1">
-            <Text className="w-[78px]">Thời gian đi:</Text>
-            <Text className="text-[#FF7F50] italic font-semibold">
-              {data.createAt}
-            </Text>
+          <MaterialIcons name="south" color="#D9D9D9" size={14} />
+          <View className="flex-row gap-x-2">
+            <MaterialIcons name="location-pin" color="#27AE60" size={16} />
+            <Text className="leading-[1.3] w-[100%]">{data.destination}</Text>
           </View>
-        </Link>
+        </View>
+      </View>
+      <View className="flex-row gap-x-1 items-center mb-2 p-2 pt-3">
+        <Text>Tổng tiền: </Text>
+        <Text className="text-[#27AE60] font-semibold italic">
+          {data.total} VNĐ
+        </Text>
+      </View>
+      <View className="flex-row gap-x-1 p-2 pt-[0px]">
+        <Text className="w-[78px]">Thời gian đi:</Text>
+        <Text className="text-[#FF7F50] italic font-semibold">
+          {data.createAt}
+        </Text>
+      </View>
+    </Link>
   );
 };
 
