@@ -8,14 +8,14 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
   const handleReceiveOrder = () => {};
   return (
     <View className="px-3 py-5 bg-[#fff] mt-4">
-      <View className="flex-row gap-x-5">
-        <View className="flex-row gap-x-3">
+      <View>
+        <View className="flex-row gap-x-3 mb-4">
           <Image
             source={images.avatar}
             className="object-cover mt-1 w-[40px] h-[40px] rounded-full border-[#D34714] border-[1px]"
           ></Image>
           <View>
-            <Text className="text-[#D34714] font-semibold mb-1 max-w-[100px] leading-[1.4]">
+            <Text className="text-[#D34714] font-semibold mb-1 w-[100%] leading-[1.4]">
               {data.name}
             </Text>
             <View className="flex-row">
@@ -26,21 +26,21 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
     <View className="flex-col gap-y-1">
           <View className="flex-row gap-x-2">
             <MaterialIcons name="adjust" color="#FF7F50" size={14} />
-            <Text className="leading-[1.2] max-w-[172px]">
+            <Text className="leading-[1.2] w-[100%]">
               {data.startingLocation}
             </Text>
           </View>
           <MaterialIcons name="south" color="#D9D9D9" size={14} />
           <View className="flex-row gap-x-2">
             <MaterialIcons name="location-pin" color="#27AE60" size={16} />
-            <Text className="leading-[1.3] max-w-[172px]">
+            <Text className="leading-[1.3] w-[100%]">
               {data.destination}
             </Text>
           </View>
         </View>
       </View>
-      <View className="flex-col justify-between items-center mt-4">
-        <View className="flex-row gap-x-1 items-center mb-6 justify-center">
+      <View className="flex-row justify-between items-center mt-6">
+        <View className="flex-row gap-x-1 items-center justify-center">
           {/* <MaterialIcons name="money" color="#FFC700" size={16} /> */}
           <Text>Tổng tiền: </Text>
           <Text className="text-[#27AE60] font-semibold italic">{data.total} VNĐ</Text>
