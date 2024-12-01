@@ -7,7 +7,7 @@ import Button from "../Button";
 const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
   const handleReceiveOrder = () => {};
   return (
-    <View className="px-3 py-5 bg-[#fff] mt-4">
+    <View className="p-3 bg-[#fff] mt-3 border-[1px] border-[#FFEBE4]">
       <View>
         <View className="flex-row gap-x-3 mb-4">
           <Image
@@ -23,7 +23,7 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
             </View>
           </View>
         </View>
-    <View className="flex-col gap-y-1">
+        <View className="flex-col gap-y-1">
           <View className="flex-row gap-x-2">
             <MaterialIcons name="adjust" color="#FF7F50" size={14} />
             <Text className="leading-[1.2] w-[100%]">
@@ -33,9 +33,7 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
           <MaterialIcons name="south" color="#D9D9D9" size={14} />
           <View className="flex-row gap-x-2">
             <MaterialIcons name="location-pin" color="#27AE60" size={16} />
-            <Text className="leading-[1.3] w-[100%]">
-              {data.destination}
-            </Text>
+            <Text className="leading-[1.3] w-[100%]">{data.destination}</Text>
           </View>
         </View>
       </View>
@@ -43,7 +41,9 @@ const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
         <View className="flex-row gap-x-1 items-center justify-center">
           {/* <MaterialIcons name="money" color="#FFC700" size={16} /> */}
           <Text>Tổng tiền: </Text>
-          <Text className="text-[#27AE60] font-semibold italic">{data.total} VNĐ</Text>
+          <Text className="text-[#27AE60] font-semibold italic">
+            {data.total?.toLocaleString("vi-VN").replace(/\./g, ",")} VNĐ
+          </Text>
         </View>
         <Button
           type="primary"

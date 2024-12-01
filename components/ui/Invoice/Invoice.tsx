@@ -8,7 +8,7 @@ const HistoryItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
   return (
     <Link
       href="/detailOrder"
-      className="px-3 py-5 bg-[#fff] mt-4 border-[1px] border-[#FFEBE4]"
+      className="p-3 bg-[#fff] mt-3 border-[1px] border-[#FFEBE4]"
     >
       <View>
         <View className="flex-row gap-x-3 mb-4">
@@ -42,12 +42,12 @@ const HistoryItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
       <View className="flex-row gap-x-1 items-center mb-2 p-2 pt-3">
         <Text>Tổng tiền: </Text>
         <Text className="text-[#27AE60] font-semibold italic">
-          {data.total} VNĐ
+          {data.total?.toLocaleString().replace(/\./g, ",")} VNĐ
         </Text>
       </View>
       <View className="flex-row gap-x-1 p-2 pt-[0px]">
         <Text className="w-[78px]">Thời gian đi:</Text>
-        <Text className="text-[#FF7F50] italic font-semibold">
+        <Text className="italic font-semibold">
           {data.createAt}
         </Text>
       </View>

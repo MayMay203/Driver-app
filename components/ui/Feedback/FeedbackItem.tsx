@@ -1,16 +1,19 @@
 import images from "@/assets/images";
 import Feedback from "@/interface/Feedback";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Link, useRouter } from "expo-router";
 // import { Link } from "expo-router";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 const FeedbackItem: React.FC<{ data: Feedback; className?: string }> = ({
   data,
   className,
 }) => {
+  const router = useRouter();
   return (
     // <Link href="/detailOrder" className="mt-2">
-    <View
+    <TouchableOpacity
+      onPress={() => router.push("/detailOrder")}
       className={`p-2 bg-[white] border-[1px] border-[#FFEBE4] mt-2 ${
         className || ""
       }`}
@@ -30,13 +33,13 @@ const FeedbackItem: React.FC<{ data: Feedback; className?: string }> = ({
         </View>
         <View className="flex-row gap-x-1">
           {Array.from({ length: data.ratableValue }).map((_, index) => (
-            <MaterialIcons key={index} name="star" color="yellow" size={20} />
+            <MaterialIcons key={index} name="star" color="#ffc700" size={20} />
           ))}
         </View>
       </View>
       <Text className="mt-3 leading-[1.3]">{data.content}</Text>
-    </View>
-    //  </Link>
+    </TouchableOpacity>
+    // </Link>
   );
 };
 export default FeedbackItem;

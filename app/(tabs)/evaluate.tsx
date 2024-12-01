@@ -52,24 +52,19 @@ const Evaluate = () => {
   const [star, setStar] = useState(5);
   return (
     <ScrollView>
-      <View
-        style={{ backgroundColor: "rgba(255,246,243,0.4)" }}
-        className="pb-4"
-      >
+      <View style={{ backgroundColor: "white" }} className="pb-4">
         <Header />
         <View className="px-2">
-          <Text className="text-[#D5420C] font-bold text-[18px] mt-[12px] mb-[10px]">
+          <Text className="text-[18px] mt-[12px] mb-[10px] font-semibold">
             ĐÁNH GIÁ
           </Text>
           <View>
             <View className="flex-row items-center mt-6 justify-between">
-              <Text className="text-[16px] text-[#D5420C] font-medium">
-                Tất cả
-              </Text>
+              <Text className="text-[16px]">Tất cả</Text>
               {
                 <TouchableOpacity
                   className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]"
-                  style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
+                  // style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
                 >
                   <MaterialIcons color="#FF7F50" name="filter" />
                   <Text className="text-[#FF7F50]">Bộ lọc</Text>
@@ -80,7 +75,7 @@ const Evaluate = () => {
               {[5, 4, 3, 2, 1].map((rating) => (
                 <TouchableOpacity
                   key={rating}
-                  className="flex-row p-2 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-1/3 justify-center items-center gap-x-1"
+                  className="flex-row p-2 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-1/3 justify-center items-center gap-x-1"
                   onPress={() => setStar(rating)}
                   style={
                     star === rating
@@ -91,16 +86,16 @@ const Evaluate = () => {
                   }
                 >
                   <Text
-                    className="text-[rgba(255,127,80,0.8)] font-medium text-[16px]"
+                    className="text-[rgb(255,127,80)] font-medium text-[16px]"
                     style={star === rating ? { color: "#FF723E" } : {}}
                   >
                     {rating}
                   </Text>
-                  <MaterialIcons name="star" color="yellow" size={18} />
+                  <MaterialIcons name="star" color="#ffc700" size={18} />
                 </TouchableOpacity>
               ))}
             </View>
-            <FeedbackList dataList={feedbackList}/>
+            <FeedbackList dataList={feedbackList} />
           </View>
         </View>
       </View>
