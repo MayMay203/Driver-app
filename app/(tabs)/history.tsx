@@ -67,13 +67,14 @@ const History = () => {
   return (
     <ScrollView>
       <View
-        style={{ backgroundColor: "rgba(255,246,243,0.4)" }}
+        style={{ backgroundColor: "white" }}
+        // style={{ backgroundColor: "rgba(255,246,243,0.4)" }}
         className="pb-4"
       >
         <Header />
         <View className="px-2">
           <View>
-            <Text className="text-[#D5420C] font-bold text-[18px] mt-[12px] mb-[10px]">
+            <Text className="font-medium text-[18px] mt-[12px] mb-[10px]">
               TỔNG SỐ CHUYẾN
             </Text>
             <View className="flex-row gap-x-3 justify-center">
@@ -84,34 +85,27 @@ const History = () => {
           </View>
           <View>
             <View className="flex-row items-center mt-6 justify-between">
-              <Text className="text-[16px] text-[#D5420C] font-medium">
-                Tất cả
-              </Text>
+              <Text className="text-[16px]">Tất cả</Text>
               {
-                <TouchableOpacity
-                  className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]"
-                  style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
-                >
+                <TouchableOpacity className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]">
                   <MaterialIcons color="#FF7F50" name="filter" />
                   <Text className="text-[#FF7F50]">Bộ lọc</Text>
                 </TouchableOpacity>
               }
             </View>
-            <View className="flex-row w-full gap-x-4 justify-center mt-5">
-              <View className="flex-row p-2 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-1/3 justify-center">
-                <Text className="text-[#D5420C] font-medium text-[16px]">
-                  124 chuyến
-                </Text>
+            <View className="flex-row w-full gap-x-4 justify-center mt-7">
+              <View className="flex-row p-2 px-4 rounded-[999px] border-[#D34714] border-[1px] w-[150px] justify-center bg-[#D34714]">
+                <Text className="text-[16px] text-white font-bold">124 chuyến</Text>
               </View>
-              <View className="flex-row p-2 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-1/3 justify-center">
-                <Text className="text-[#D5420C] font-medium text-[16px]">
-                  1.280.000 đồng
+              <View className="flex-row p-2 px-4 rounded-[999px] border-[#D34714] border-[1px] w-[150px] justify-center bg-[#D34714]">
+                <Text className="text-[16px] text-white font-bold">
+                  1.280.000 VNĐ
                 </Text>
               </View>
             </View>
           </View>
           <View>
-            <Text className="text-[#D5420C] font-bold text-[18px] mt-[32px] mb-[10px]">
+            <Text className="font-semibold text-[18px] mt-[32px] mb-[10px]">
               LỊCH SỬ CHUYẾN XE
             </Text>
             <InvoiceList dataList={orderList} />

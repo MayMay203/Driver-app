@@ -14,7 +14,7 @@ const OverviewItem: React.FC<overviewProps> = ({ title, type, number }) => {
       <Text className="text-[12px] text-[rgba(0,0,0,0.5)]">{title}</Text>
       <View className="flex-col items-center">
         <Text className="text-[14px] text-[#D5420C] font-bold">
-          {type === "history" ? number + " chuyến" : number + ""}
+          {type === "history" ? number + " chuyến" : number.toLocaleString().replace('.',',') + ""}
         </Text >
         {type === "income" && <Text className="text-[14px] text-[#D5420C] font-bold">VNĐ</Text>}
       </View>

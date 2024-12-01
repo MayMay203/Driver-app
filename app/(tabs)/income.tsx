@@ -69,13 +69,13 @@ const Income = () => {
   return (
     <ScrollView>
       <View
-        style={{ backgroundColor: "rgba(255,246,243,0.4)" }}
+        style={{ backgroundColor: "white" }}
         className="pb-4"
       >
         <Header />
         <View className="px-2">
           <View>
-            <Text className="text-[#D5420C] font-bold text-[18px] mt-[12px] mb-[10px]">
+            <Text className="font-semibold text-[18px] mt-[12px] mb-[10px]">
               THU NHẬP
             </Text>
             <View className="flex-row gap-x-3 justify-center">
@@ -86,13 +86,13 @@ const Income = () => {
           </View>
           <View>
             <View className="flex-row items-center mt-6 justify-between">
-              <Text className="text-[16px] text-[#D5420C] font-medium">
+              <Text className="text-[16px]">
                 Tất cả
               </Text>
               {
                 <TouchableOpacity
                   className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]"
-                  style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
+                  // style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
                 >
                   <MaterialIcons color="#FF7F50" name="filter" />
                   <Text className="text-[#FF7F50]">Bộ lọc</Text>
@@ -100,36 +100,27 @@ const Income = () => {
               }
             </View>
             <View className="flex-row w-full gap-x-4 justify-center mt-6">
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-[100px] justify-center">
-                <Text className="text-[rgba(163,58,58,0.8)]">Tổng</Text>
+              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
+                <Text>Tổng</Text>
                 <View className="flex-col items-center">
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    1.280.000
-                  </Text>
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    VNĐ
+                  <Text className="text-[#27AE60] font-medium italic text-[14px]">
+                    1,280,000đ
                   </Text>
                 </View>
               </View>
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-[100px] justify-center">
-                <Text className="text-[rgba(163,58,58,0.8)]">Tiền mặt</Text>
+              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
+                <Text>Tiền mặt</Text>
                 <View className="flex-col items-center">
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    1.280.000
-                  </Text>
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    VNĐ
+                  <Text className="text-[#27AE60] font-medium italic text-[14px]">
+                    1,280,000
                   </Text>
                 </View>
               </View>
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] bg-[#FFF6F3] min-w-[100px] justify-center">
-                <Text className="text-[rgba(163,58,58,0.8)]">Tài khoản</Text>
+              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
+                <Text>Tài khoản</Text>
                 <View className="flex-col items-center">
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    1.280.000
-                  </Text>
-                  <Text className="text-[#D5420C] font-medium text-[14px]">
-                    VNĐ
+                  <Text className="text-[#27AE60] font-medium italic text-[14px]">
+                    1,280,000
                   </Text>
                 </View>
               </View>

@@ -58,10 +58,7 @@ const Orders = () => {
 
   return (
     <ScrollView>
-      <View
-        style={{ backgroundColor: "rgba(255,246,243,0.6)" }}
-        className="pb-4"
-      >
+      <View style={{ backgroundColor: "white" }} className="pb-4">
         <Header />
         <View className="relative">
           <View className="bg-[rgba(255,255,255,0.7)] p-3 w-[70%] absolute right-[12px] top-[20px] z-10">
@@ -78,11 +75,9 @@ const Orders = () => {
             <View className="flex-row gap-x-2 items-center">
               <Image source={images.avatar} className="object-contain"></Image>
               <View>
-                <Text className="text-[#D34714] font-semibold mb-1">
-                  Bùi Nguyễn Đức Anh
-                </Text>
+                <Text className="font-semibold mb-1">Bùi Nguyễn Đức Anh</Text>
                 <View className="flex-row">
-                  <Text className="text-[#D34714] text-[10px] font-semibold">
+                  <Text className="text-[10px] font-semibold">
                     Không hoạt động
                   </Text>
                   {/* Button */}
@@ -102,7 +97,7 @@ const Orders = () => {
           </View>
         </View>
         <View className="px-2">
-          <Text className="text-[#D5420C] font-bold text-[18px] mt-[50px]">
+          <Text className="font-semibold text-[18px] mt-[50px]">
             DANH SÁCH CÁC ĐƠN HIỆN CÓ
           </Text>
           <OrderList dataList={orders} />
