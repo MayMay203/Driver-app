@@ -3,9 +3,13 @@ import Order from "@/interface/Order";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Image, Text, View } from "react-native";
 import Button from "../Button";
+import { useRouter } from "expo-router";
 
 const OrderItem: React.FC<{ data: Partial<Order> }> = ({ data }) => {
-  const handleReceiveOrder = () => {};
+  const router = useRouter();
+  const handleReceiveOrder = () => {
+    router.push("/receiveOrder");
+  };
   return (
     <View className="p-3 bg-[#fff] mt-3 border-[1px] border-[#FFEBE4]">
       <View>

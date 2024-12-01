@@ -3,7 +3,7 @@ import Header from "@/components/ui/Header";
 import OrderList from "@/components/ui/Order/OrderList";
 import Order from "@/interface/Order";
 import { useState } from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 
 const orderList: Partial<Order>[] = [
   {
