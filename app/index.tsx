@@ -98,14 +98,14 @@ const Login = () => {
         >
           <Text className="text-[#FF7F50] font-bold italic">Quên mật khẩu</Text>
         </TouchableOpacity>
-        <View className="mt-6">
+        <View className="mt-12">
           <View className="flex-row items-center gap-x-3 justify-center">
             <View className="w-1/3 bg-[#ccc] h-[1px]"></View>
             <Text className="text-[#444] text-[14px]">hoặc</Text>
             <View className="w-1/3 bg-[#ccc] h-[1px]"></View>
           </View>
           <TouchableOpacity
-            className="flex-row justify-center items-center gap-x-2 border-[#ccc] bg-white border-[1px] mt-4 rounded-[4px]"
+            className="flex-row justify-center items-center gap-x-2 border-[#ccc] bg-white border-[1px] mt-6 rounded-[4px]"
             style={{
               padding: 6,
             }}

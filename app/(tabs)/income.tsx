@@ -63,15 +63,21 @@ const orderList = [
     paidAt: "12:00 20-11-2024",
   },
 ];
+
+const data = [
+  { title: "Tổng", amount: "1,280,000đ" },
+  { title: "Tiền mặt", amount: "1,280,000" },
+  {
+    title: "Tài khoản",
+    amount: "1,280,000",
+  },
+];
 const Income = () => {
   const [tab, setTab] = useState('cash')
 
   return (
     <ScrollView>
-      <View
-        style={{ backgroundColor: "white" }}
-        className="pb-4"
-      >
+      <View style={{ backgroundColor: "white" }} className="pb-4">
         <Header />
         <View className="px-2">
           <View>
@@ -86,13 +92,10 @@ const Income = () => {
           </View>
           <View>
             <View className="flex-row items-center mt-6 justify-between">
-              <Text className="text-[16px]">
-                Tất cả
-              </Text>
+              <Text className="text-[16px]">Tất cả</Text>
               {
                 <TouchableOpacity
                   className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]"
-                  // style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
                 >
                   <MaterialIcons color="#FF7F50" name="filter" />
                   <Text className="text-[#FF7F50]">Bộ lọc</Text>
@@ -100,36 +103,23 @@ const Income = () => {
               }
             </View>
             <View className="flex-row w-full gap-x-4 justify-center mt-6">
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
-                <Text>Tổng</Text>
-                <View className="flex-col items-center">
+              {data.map((item, index) => (
+                <View
+                  key={index}
+                  className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center"
+                >
+                  <Text>{item.title}</Text>
                   <Text className="text-[#27AE60] font-medium italic text-[14px]">
-                    1,280,000đ
+                    {item.amount}
                   </Text>
                 </View>
-              </View>
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
-                <Text>Tiền mặt</Text>
-                <View className="flex-col items-center">
-                  <Text className="text-[#27AE60] font-medium italic text-[14px]">
-                    1,280,000
-                  </Text>
-                </View>
-              </View>
-              <View className="flex-col items-center py-3 px-4 rounded-[999px] border-[#FFEBE4] border-[1px] min-w-[100px] justify-center">
-                <Text>Tài khoản</Text>
-                <View className="flex-col items-center">
-                  <Text className="text-[#27AE60] font-medium italic text-[14px]">
-                    1,280,000
-                  </Text>
-                </View>
-              </View>
+              ))}
             </View>
           </View>
           <View>
             <View className="flex-row mt-[40px]">
               <TouchableOpacity
-                onPress={()=>setTab('cash')}
+                onPress={() => setTab("cash")}
                 className="w-1/2 p-3"
                 style={tab === "cash" ? { backgroundColor: "#FFEBE4" } : {}}
               >
@@ -145,7 +135,7 @@ const Income = () => {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={()=>setTab('credit')}
+                onPress={() => setTab("credit")}
                 className="w-1/2 p-3"
                 style={tab === "credit" ? { backgroundColor: "#FFEBE4" } : {}}
               >

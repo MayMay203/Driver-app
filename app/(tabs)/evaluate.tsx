@@ -64,7 +64,6 @@ const Evaluate = () => {
               {
                 <TouchableOpacity
                   className="flex-row gap-x-2 items-center p-2 px-4 rounded-[999px] border-[#FF7F50] border-[1px]"
-                  // style={{ backgroundColor: "rgba(255, 127, 80, 0.2)" }}
                 >
                   <MaterialIcons color="#FF7F50" name="filter" />
                   <Text className="text-[#FF7F50]">Bộ lọc</Text>
